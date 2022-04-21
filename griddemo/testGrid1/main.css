@@ -1,0 +1,31 @@
+
+.mygrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header header header"
+        "main main . sidebar"
+        ". footer footer sidebar";
+}
+
+#thefooter {
+    grid-area: footer;
+}
+
+#thesidebar {
+    grid-area: sidebar;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    grid-template-areas: ". ." ". .";
+}
+
+.content {
+    grid-area: main;
+}
+
+#aheader {
+    grid-area: header;
+}
